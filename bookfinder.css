@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.search-bar {
+    text-align: center;
+    width: 800px;
+}
+
+.container-searchbar {
+    height: 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-books {
+    
+}
