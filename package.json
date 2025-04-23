@@ -1,0 +1,19 @@
+{
+  "name": "book-finder-app",
+  "version": "1.0.0",
+  "description": "An application that allows users to search for books by entering a query (Title, Author, etc).",
+  "main": "bookfinder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattFLPe/book-finder-app.git"
+  },
+  "author": "Mateus Felipe Araújo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattFLPe/book-finder-app/issues"
+  },
+  "homepage": "https://github.com/MattFLPe/book-finder-app#readme"
+}
