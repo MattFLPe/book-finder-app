@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MattFLPe/book-finder-app#readme",
   "dependencies": {
     "babel": "^6.23.0",
+    "consign": "^0.1.6",
     "express": "^5.1.0"
   }
 }
