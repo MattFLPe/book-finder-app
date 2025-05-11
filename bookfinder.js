@@ -1,23 +1,25 @@
+import express from "express";
+import consign from "consign";
 
+const PORT = 3000;
+const app = express();
+
+consign()
+.include()
+.then()
+.into()
 
 const form = document.getElementById("#form-search") 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
+});
 
-const apiUrl = 'https://api.example.com/data';
 
-// Make a GET request
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  })
-})
+
+app.post("/", (req, res) => {
+
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
