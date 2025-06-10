@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-
 function SearchForm() {
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
@@ -8,11 +7,11 @@ function SearchForm() {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      fetch(`/api/search?q=${search}`)
+      fetch(`https://openlibrary.org/search.json?q=${search}`)
       .then((response) => response.json())
       .then((results) => {
-        console.log(results);
-        setResults(results.docs);
+      console.log(results);        
+       setResults(results.docs);
 });
       };
       
@@ -27,8 +26,14 @@ function SearchForm() {
         </label>
         <div>
           <ul>
-            {results.map((book, key) => {
-              return <li key={key}>{book.title || "No title"}</li>
+            {results.map((book, id) => {
+            <li key={id}>{book.title || "No title"}</li>
+            const url = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+            if(book.cover_i) {
+              return <img src={url} alt="Book cover"></img>
+              } else {
+              return <li key={id}>{book.title || "No title"}</li>
+              }
             })}
           </ul>
         </div>
